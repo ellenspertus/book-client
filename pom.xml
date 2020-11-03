@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.mills.cs.180a</groupId>
+  <artifactId>book-client-example</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>book-client</name>
+  <description>Book REST API example</description>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.15</maven.compiler.source>
+    <maven.compiler.target>1.15</maven.compiler.target>
+  </properties>
+  
+   <dependencies>
+    <!-- Begin Open Feign dependencies -->
+    <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-core -->
+    <dependency>
+        <groupId>io.github.openfeign</groupId>
+        <artifactId>feign-core</artifactId>
+        <version>11.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-jackson -->
+    <dependency>
+        <groupId>io.github.openfeign</groupId>
+        <artifactId>feign-jackson</artifactId>
+        <version>11.0</version>
+    </dependency>
+    <!-- End Open Feign dependencies -->
+  </dependencies>
+</project>
