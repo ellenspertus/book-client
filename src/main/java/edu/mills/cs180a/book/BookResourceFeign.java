@@ -1,4 +1,4 @@
-package edu.mills.cs180a;
+package edu.mills.cs180a.book;
 
 import java.util.List;
 import feign.Headers;
