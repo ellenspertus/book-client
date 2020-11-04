@@ -14,14 +14,14 @@ public class WordnikImpl {
 
     public WordnikImpl() throws IOException {
         try (InputStream is = Main.class.getClassLoader().getResourceAsStream("api-key.txt")) {
-            apiKey = IOUtils.toString(is, StandardCharsets.UTF_8);
+            apiKey = IOUtils.toString(is, StandardCharsets.UTF_8).trim();
         }
     }
 
     public WordOfTheDay getWordOfTheDay() {
         WordnikResource wordnikResource = Feign.builder().encoder(new JacksonEncoder())
                 .decoder(new JacksonDecoder()).target(WordnikResource.class, URI_WORDNIK);
-        return wordnikResource.getWordOfTheDay();
+        return wordnikResource.getWordOfTheDay(apiKey);
     }
 
     public static void main(String[] args) throws IOException {

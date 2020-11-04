@@ -16,4 +16,9 @@ public class WordOfTheDay {
     public String getWord() {
         return word;
     }
+
+    @Override
+    public String toString() {
+        return word;
+    }
 }
