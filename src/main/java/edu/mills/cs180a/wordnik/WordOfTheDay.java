@@ -24,8 +24,8 @@ public class WordOfTheDay {
 
     @Override
     public String toString() {
-        if (definitions != null && !definitions.isEmpty()) {
-            return word + " (" + definitions.get(0) + ")";
+        if (definitions != null) {
+            return word + "\n" + Definition.formatDefinitions(definitions);
         } else {
             return word;
         }
