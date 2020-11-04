@@ -1,13 +1,10 @@
 package edu.mills.cs180a.wordnik;
 
+import java.util.List;
+
 public class WordOfTheDay {
     private String word;
-
-    public WordOfTheDay() {}
-
-    public WordOfTheDay(String word) {
-        this.word = word;
-    }
+    private List<Definition> definitions;
 
     public void setWord(String word) {
         this.word = word;
@@ -17,8 +14,20 @@ public class WordOfTheDay {
         return word;
     }
 
+    public void setDefinitions(List<Definition> definitions) {
+        this.definitions = definitions;
+    }
+
+    private List<Definition> getDefinitions() {
+        return definitions;
+    }
+
     @Override
     public String toString() {
-        return word;
+        if (definitions != null && !definitions.isEmpty()) {
+            return word + " (" + definitions.get(0) + ")";
+        } else {
+            return word;
+        }
     }
 }
